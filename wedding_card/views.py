@@ -1,7 +1,9 @@
 from django.forms import model_to_dict
 from django.http import JsonResponse
 from django.shortcuts import render
+from django.utils.decorators import method_decorator
 from django.views import View
+from django.views.decorators.csrf import csrf_exempt
 
 from wedding_card.forms import CreateMessageForm
 from wedding_card.models import Message
@@ -19,6 +21,7 @@ class IndexView(View):
 
 
 # noinspection PyMethodMayBeStatic
+@method_decorator(csrf_exempt, name='dispatch')
 class MessageView(View):
     def get(self, request):
         messages = Message.objects.all().order_by('-uploaded_at')

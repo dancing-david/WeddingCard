@@ -134,4 +134,117 @@
 		}
     });
 
+    $('.groom-account').click(function () {
+        Swal.fire({
+            html:
+                '<div class="hstack mb-3">' +
+                '<h5 class="mb-0">신랑 이규정</h5>' +
+                '<a href="javascript:;" class="position-relative ml-auto text-primary" onclick="copyText(this)">하나은행 110-112-334-55</a>' +
+                '</div>' +
+                '<div class="hstack mb-3">' +
+                '<h5 class="mb-0">부) 이보현</h5>' +
+                '<a href="javascript:;" class="position-relative ml-auto text-primary" onclick="copyText(this)">신한은행 110-112-334-55</a>' +
+                '</div>' +
+                '<div class="hstack">' +
+                '<h5 class="mb-0">모) 표덕순</h5>' +
+                '<a href="javascript:;" class="position-relative ml-auto text-primary" onclick="copyText(this)">국민은행 110-112-334-55</a>' +
+                '</div>',
+            focusConfirm: false,
+            confirmButtonText: '확인',
+        });
+    });
+
+    $('.bride-account').click(function () {
+        Swal.fire({
+            html:
+                '<div class="hstack mb-3">' +
+                '<h5 class="mb-0">신부 정지혜</h5>' +
+                '<a href="javascript:;" class="position-relative ml-auto text-primary" onclick="copyText(this)">하나은행 110-112-334-55</a>' +
+                '</div>' +
+                '<div class="hstack mb-3">' +
+                '<h5 class="mb-0">부) 정순동</h5>' +
+                '<a href="javascript:;" class="position-relative ml-auto text-primary" onclick="copyText(this)">신한은행 110-112-334-55</a>' +
+                '</div>' +
+                '<div class="hstack">' +
+                '<h5 class="mb-0">모) 박선미</h5>' +
+                '<a href="javascript:;" class="position-relative ml-auto text-primary" onclick="copyText(this)">부산은행 110-112-334-55</a>' +
+                '</div>',
+            focusConfirm: false,
+            confirmButtonText: '확인',
+        });
+    });
+
+    function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!this.crossDomain) {
+                xhr.setRequestHeader('X-CSRFToken', getCookie('csrftoken'));
+            }
+        }
+    });
+
+    $('#send-message-form').on('submit', function(e) {
+        e.preventDefault();
+
+        Swal.fire({
+            title: "메세지를 보내실래요?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#1c84ee",
+            cancelButtonColor: "#fd625e",
+            confirmButtonText: "확인",
+            cancelButtonText: "취소",
+        }).then(function (result) {
+            if (result.value) {
+                var form = $('#send-message-form')[0];
+                var form_data = new FormData(form);
+                $.ajax({
+                    url: '/message',
+                    type: 'POST',
+                    contentType: false,
+                    processData: false,
+                    data: form_data,
+                    success: function(response) {
+                        console.log(response);
+                        var html = '<div class="row mb-2 bg-secondary p-4">' +
+                                '<div class="col-md-12 mb-2">' +
+                                '<div class="hstack">' +
+                                '<h6 class="mb-0">' + response.name + '</h6>' +
+                                '<span class="ml-auto">' + response.uploaded_at + '</span>' +
+                                '</div></div>' +
+                                '<div class="col-md-12">' +
+                                '<span>' + response.message + '</span>' +
+                                '</div></div>'
+                        $('.message-area').prepend(html);
+                    }
+                });
+            }
+        });
+    });
+
 })(jQuery);
+
+function copyText(element) {
+    navigator.clipboard.writeText($(element).text());
+    Swal.fire({
+        title: '복사되었습니다',
+        icon: 'success',
+//        focusConfirm: false,
+        confirmButtonText: '확인',
+    });
+}

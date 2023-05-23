@@ -43,15 +43,16 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav ml-auto py-0">
                 <a href="#home" class="nav-item nav-link active">Home</a>
-                <a href="#greet" class="nav-item nav-link">Greet</a>
-                <a href="#gallery" class="nav-item nav-link">Gallery</a>
+                <a href="#greet" class="nav-item nav-link">Greeting</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
             <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
                 <h1 class="font-secondary text-white mb-n2">KyuJeong <span class="text-primary">&</span> JiHye</h1>
             </a>
             <div class="navbar-nav mr-auto py-0">
+                <a href="#gallery" class="nav-item nav-link">Gallery</a>
                 <a href="#information" class="nav-item nav-link">Information</a>
-                <a href="#comment" class="nav-item nav-link">Comment</a>
+                <a href="#message" class="nav-item nav-link">Message</a>
             </div>
         </div>
     </nav>
@@ -153,7 +154,7 @@
 
 
     <!-- Contact Start -->
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-5" id="contact">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
                 <h1 class="font-secondary display-4">Contact</h1>
@@ -163,18 +164,52 @@
                 <div class="col-md-6 p-0 text-center text-md-right">
                     <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
                         <h3 class="mb-3"><i class="fa fa-male text-primary pr-3"></i> 신랑측 연락하기</h3>
-                        <div class="position-relative">
-                            <a class="btn btn-outline-primary btn-square mr-1" href="tel:01054560169"><i class="fa fa-phone"></i></a>
-                            <a class="btn btn-outline-primary btn-square mr-1" href="sms:01054560169"><i class="fa fa-comment"></i></a>
+                        <div class="hstack mb-3">
+                            <h5>신랑 이규정</h5>
+                            <div class="position-relative ml-auto">
+                                <a class="btn btn-outline-primary btn-square mr-1" href="tel:01054560169"><i class="fa fa-phone"></i></a>
+                                <a class="btn btn-outline-primary btn-square mr-1" href="sms:01054560169"><i class="fa fa-comment"></i></a>
+                            </div>
+                        </div>
+                        <div class="hstack mb-3">
+                            <h5>아버지 이보현</h5>
+                            <div class="position-relative ml-auto">
+                                <a class="btn btn-outline-primary btn-square mr-1" href="tel:01068091001"><i class="fa fa-phone"></i></a>
+                                <a class="btn btn-outline-primary btn-square mr-1" href="sms:01068091001"><i class="fa fa-comment"></i></a>
+                            </div>
+                        </div>
+                        <div class="hstack">
+                            <h5>어머니 표덕순</h5>
+                            <div class="position-relative ml-auto">
+                                <a class="btn btn-outline-primary btn-square mr-1" href="tel:01084331001"><i class="fa fa-phone"></i></a>
+                                <a class="btn btn-outline-primary btn-square mr-1" href="sms:01084331001"><i class="fa fa-comment"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 p-0 text-center text-md-left">
                     <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
                         <h3 class="mb-3">신부측 연락하기 <i class="fa fa-female text-primary pl-3"></i></h3>
-                        <div class="position-relative">
-                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fa fa-phone"></i></a>
-                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fa fa-comment"></i></a>
+                        <div class="hstack mb-3">
+                            <div class="position-relative mr-auto">
+                                <a class="btn btn-outline-primary btn-square mr-1" href="tel:01092775406"><i class="fa fa-phone"></i></a>
+                                <a class="btn btn-outline-primary btn-square mr-1" href="sms:01092775406"><i class="fa fa-comment"></i></a>
+                            </div>
+                            <h5>신부 정지혜</h5>
+                        </div>
+                        <div class="hstack mb-3">
+                            <div class="position-relative mr-auto">
+                                <a class="btn btn-outline-primary btn-square mr-1" href="tel:01092775406"><i class="fa fa-phone"></i></a>
+                                <a class="btn btn-outline-primary btn-square mr-1" href="sms:01092775406"><i class="fa fa-comment"></i></a>
+                            </div>
+                            <h5>아버지 정순동</h5>
+                        </div>
+                        <div class="hstack">
+                            <div class="position-relative mr-auto">
+                                <a class="btn btn-outline-primary btn-square mr-1" href="tel:01092775406"><i class="fa fa-phone"></i></a>
+                                <a class="btn btn-outline-primary btn-square mr-1" href="sms:01092775406"><i class="fa fa-comment"></i></a>
+                            </div>
+                            <h5>어머니 박선미</h5>
                         </div>
                     </div>
                 </div>
@@ -325,30 +360,60 @@
     <!-- Information End -->
 
 
-    <!-- Comment Start -->
-    <div class="container-fluid py-5" id="comment">
+    <!-- Account Start -->
+    <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Comment</h6>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <h5 class="font-weight-normal text-muted mb-3 pb-3">축하의 마음을 담아 축의금을 전달해 보세요.</h5>
+                </div>
+            </div>
+            <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0">
+                <div class="col-md-6 p-0 text-center text-md-right">
+                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
+                        <h4 class="mb-3"><i class="fa fa-male text-primary pr-3"></i> 신랑측 마음 전하기</h4>
+                        <button type="button" class="btn btn-primary groom-account">계좌번호 확인</button>
+                    </div>
+                </div>
+                <div class="col-md-6 p-0 text-center text-md-left">
+                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
+                        <h4 class="mb-3">신부측 마음 전하기 <i class="fa fa-female text-primary pl-3"></i></h4>
+                        <button type="button" class="btn btn-primary bride-account">계좌번호 확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Account End -->
+
+
+
+    <!-- Message Start -->
+    <div class="container-fluid py-5" id="message">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Message</h6>
                 <h1 class="font-secondary display-4">Please Celebrate</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
-            <div class="table-responsive">
-            </div>
+
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="text-center">
-                        <form action="https://mnx2ogn5dc.execute-api.ap-northeast-2.amazonaws.com/v1/comment" method="post">
+                        <form id="send-message-form" action="{% url 'wedding_card:message' %}" method="post">
                             <div class="form-row">
                                 <div class="form-group col-sm-12">
-                                    <input type="text" class="form-control bg-secondary border-0 py-4 px-3" required placeholder="이름"/>
+                                    <input type="text" class="form-control bg-secondary border-0 py-4 px-3" name="name" required placeholder="이름"/>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="축하 메세지를 입력해주세요" required></textarea>
+                                <textarea class="form-control bg-secondary border-0 py-2 px-3" name="message" rows="5" placeholder="축하 메세지를 입력해주세요" required></textarea>
                             </div>
                             <div>
-                                <button class="btn btn-primary font-weight-bold py-3 px-5">등록</button>
+                                <button class="btn btn-primary font-weight-bold py-3 px-5">보내기</button>
                             </div>
                         </form>
                     </div>
@@ -356,10 +421,59 @@
             </div>
         </div>
     </div>
-    <!-- Comment End -->
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 message-area">
+                    {% if messages %}
+                    {% for message in messages %}
+                    <div class="row mb-2 bg-secondary p-4">
+                        <div class="col-md-12 mb-2">
+                            <div class="hstack">
+                                <h6 class="mb-0">{{ message.name }}</h6>
+                                <span class="ml-auto">{{ message.uploaded_at }}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <span>{{ message.message }}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+
+<!--                    <table class="table">-->
+<!--                        <tbody>-->
+<!--                            {% if messages %}-->
+<!--                            {% for message in messages %}-->
+<!--                            <tr>-->
+<!--                                <td>-->
+<!--                                    <div class="row">-->
+<!--                                        <div class="col-12 col-lg-12">-->
+<!--                                            <div class="hstack">-->
+<!--                                                <h6 class="mb-0">{{ message.name }}</h6>-->
+<!--                                                <span class="mr-auto">{{ message.uploaded_at }}</span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-12 col-lg-12">-->
+<!--                                            <span>{{ message.message }}</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </td>-->
+<!--                            </tr>-->
+<!--                            {% endfor %}-->
+<!--                            {% endif %}-->
+<!--                        </tbody>-->
+<!--                    </table>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message End -->
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white py-5" id="contact" style="margin-top: 90px;">
+    <div class="container-fluid bg-dark text-white py-5" style="margin-top: 90px;">
         <div class="container text-center py-5">
             <div class="section-title position-relative text-center">
                 <h1 class="font-secondary display-3 text-white">Thank You</h1>
@@ -392,6 +506,10 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="{% static 'lib/easing/easing.min.js'%}"></script>
     <script src="{% static 'lib/waypoints/waypoints.min.js'%}"></script>
     <script src="{% static 'lib/owlcarousel/owl.carousel.min.js'%}"></script>

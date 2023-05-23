@@ -20,8 +20,13 @@ class IndexView(View):
 
 # noinspection PyMethodMayBeStatic
 class MessageView(View):
+    def get(self, request):
+        messages = Message.objects.all().order_by('-uploaded_at')
+        response = [{'name': message.name, 'message': message.message,
+                     'uploaded_at': message.uploaded_at.strftime('%Y-%m-%d %H:%M:%S')} for message in messages]
+        return JsonResponse(response, safe=False)
+
     def post(self, request):
-        print(request.POST)
         form = CreateMessageForm(request.POST)
         response = {}
         if form.is_valid():

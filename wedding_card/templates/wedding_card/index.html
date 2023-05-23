@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {% load static %}
+    <!-- https://dancing-david.github.io/wedding_invitation/ -->
+    <meta charset="utf-8">
+    <title>규정 & 지혜 - 우리 결혼합니다</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/favicon.png'%}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css'%}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.css'%}" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <!-- Navbar Start -->
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
+        <a href="{% url 'wedding_card:index' %}" class="navbar-brand d-block d-lg-none">
+            <h1 class="font-secondary text-white mb-n2">KyuJeong <span class="text-primary">&</span> JiHye</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav ml-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#greet" class="nav-item nav-link">Greet</a>
+                <a href="#gallery" class="nav-item nav-link">Gallery</a>
+            </div>
+            <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
+                <h1 class="font-secondary text-white mb-n2">KyuJeong <span class="text-primary">&</span> JiHye</h1>
+            </a>
+            <div class="navbar-nav mr-auto py-0">
+                <a href="#information" class="nav-item nav-link">Information</a>
+                <a href="#comment" class="nav-item nav-link">Comment</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5 pb-5" id="home">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="{% static 'img/carousel-1.jpg'%}" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">KyuJeong & JiHye</h1>
+                            <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
+                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">We're getting married</h3>
+<!--                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="font-family: 'Nanum Brush Script', cursive; font-size: 48px;">우리 결혼합니다</h3>-->
+                            </div>
+                            <button type="button" class="btn-play mx-auto" data-toggle="modal"
+                                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="{% static 'img/carousel-2.jpg'%}" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">KyuJeong & JiHye</h1>
+                            <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
+                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">We're getting married</h3>
+<!--                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="font-family: 'Nanum Brush Script', cursive; font-size: 48px;">우리 결혼합니다</h3>-->
+                            </div>
+                            <button type="button" class="btn-play mx-auto" data-toggle="modal"
+                                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev justify-content-start" href="#header-carousel" data-slide="prev">
+                <div class="btn btn-primary px-0" style="width: 68px; height: 68px;">
+                    <span class="carousel-control-prev-icon mt-3"></span>
+                </div>
+            </a>
+            <a class="carousel-control-next justify-content-end" href="#header-carousel" data-slide="next">
+                <div class="btn btn-primary px-0" style="width: 68px; height: 68px;">
+                    <span class="carousel-control-next-icon mt-3"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Video Modal Start -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>        
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+
+
+    <!-- Greet Start -->
+    <div class="container-fluid py-5" id="greet">
+        <div class="container py-5">
+            <div class="card border-light text-center">
+                <div class="card-head"><h3 class="text-primary">초대합니다</h3></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="text-center mr-md-3 mb-4 mb-md-0">
+<!--                                <img class="img-fluid mb-4" src="{% static 'img/event-1.jpg'%}" alt="">-->
+<!--                                <h4 class="mb-3">The Reception</h4>-->
+                                <p class="mb-2">우리 결혼합니다</p>
+                                <p class="mb-0">축하해주세요!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Greet End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h1 class="font-secondary display-4">Contact</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0">
+                <div class="col-md-6 p-0 text-center text-md-right">
+                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
+                        <h3 class="mb-3"><i class="fa fa-male text-primary pr-3"></i> 신랑측 연락하기</h3>
+                        <div class="position-relative">
+                            <a class="btn btn-outline-primary btn-square mr-1" href="tel:01054560169"><i class="fa fa-phone"></i></a>
+                            <a class="btn btn-outline-primary btn-square mr-1" href="sms:01054560169"><i class="fa fa-comment"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 p-0 text-center text-md-left">
+                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
+                        <h3 class="mb-3">신부측 연락하기 <i class="fa fa-female text-primary pl-3"></i></h3>
+                        <div class="position-relative">
+                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fa fa-phone"></i></a>
+                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fa fa-comment"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Gallery Start -->
+    <div class="container-fluid bg-gallery" id="gallery" style="padding: 120px 0; margin: 90px 0;">
+        <div class="section-title position-relative text-center" style="margin-bottom: 120px;">
+            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>
+            <h1 class="font-secondary display-4 text-white">Our Photo Gallery</h1>
+            <i class="far fa-heart text-white"></i>
+        </div>
+        <div class="owl-carousel gallery-carousel">
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="{% static 'img/gallery-1.jpg'%}" alt="">
+                <a href="{% static 'img/gallery-1.jpg'%}" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="{% static 'img/gallery-2.jpg'%}" alt="">
+                <a href="{% static 'img/gallery-2.jpg'%}" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="{% static 'img/gallery-3.jpg'%}" alt="">
+                <a href="{% static 'img/gallery-3.jpg'%}" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="{% static 'img/gallery-4.jpg'%}" alt="">
+                <a href="{% static 'img/gallery-4.jpg'%}" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="{% static 'img/gallery-5.jpg'%}" alt="">
+                <a href="{% static 'img/gallery-5.jpg'%}" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="{% static 'img/gallery-6.jpg'%}" alt="">
+                <a href="{% static 'img/gallery-6.jpg'%}" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery End -->
+
+
+    <!-- Information Start -->
+    <div class="container-fluid py-5" id="information">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Information</h6>
+                <h1 class="font-secondary display-4">Our Wedding Information</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <h3 class="font-weight-normal">2023. 10. 28 SAT AM 11:00</h3>
+                    <br>
+                    <h3 class="font-weight-normal mb-3">페이지웨딩&파티 2층 모던홀</h3>
+                    <h5 class="font-weight-normal text-muted mb-3 pb-3"></h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-center">
+                        <img class="img-fluid mb-4" src="{% static 'img/페이지 웨딩 약도.png'%}">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-center">
+                        <img class="img-fluid mb-4" src="{% static 'img/페이지 웨딩 약도 상세.png'%}">
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-md-12 text-center">
+                    <a href="https://naver.me/GvkdOaHz" target="_blank" class="btn btn-light">
+                        <img src="https://map.naver.com/v5/assets/icon/favicon-32x32.png" width="32px" height="32px">
+                    </a>
+                    <a href="https://goo.gl/maps/tejjqH9jb1m3p7AN7" target="_blank" class="btn btn-light">
+                        <img src="https://www.google.com/images/branding/product/ico/maps15_bnuw3a_32dp.ico" width="32px" height="32px">
+                    </a>
+                    <a href="http://kko.to/0_TxgnwWT3" target="_blank" class="btn btn-light">
+                        <img src="https://map.kakao.com/favicon.ico" width="32px" height="32px">
+                    </a>
+                </div>
+                <div class="col-md-12">
+                    <div class="hstack gap-2">
+                        <span class="text-success ml-auto pl-2">네이버</span>
+                        <span class="text-danger pl-3">구글</span>
+                        <span class="text-warning mr-auto pl-2">카카오맵</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-md-12">
+                    <div id="map" style="width:100%;height:400px;"></div>
+                    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=kqvpe0x6bv&callback=initMap"></script>
+                    <script>
+                        function initMap() {
+                            map = new naver.maps.Map('map', {
+                                center: new naver.maps.LatLng(37.2451121, 127.213034),
+                                // zoom: 10
+                            });
+
+                            marker = new naver.maps.Marker({
+                                position: new naver.maps.LatLng(37.2451121, 127.213034),
+                                map: map
+                            });
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <span class="text-dark">주소복사 : <a href="javascript:;" onclick="copyAddress(this.text)">경기 용인시 처인구 백옥대로 1238</a></span>
+                </div>
+                <script>
+                    function copyAddress(address) {
+                        navigator.clipboard.writeText(address);
+                        $('.toast').toast('show');
+                    }
+                </script>
+            </div>
+            <div aria-live="polite" aria-atomic="true" style="position: relative; height: 30px;">
+                <div class="toast bg-info" role="alert" aria-live="assertive" aria-atomic="true" data-delay="1000" style="position: absolute; bottom: 0; right: 0;">
+                    <div class="toast-body text-light">
+                        주소가 복사되었습니다
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Information End -->
+
+
+    <!-- Comment Start -->
+    <div class="container-fluid py-5" id="comment">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Comment</h6>
+                <h1 class="font-secondary display-4">Please Celebrate</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="table-responsive">
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center">
+                        <form action="https://mnx2ogn5dc.execute-api.ap-northeast-2.amazonaws.com/v1/comment" method="post">
+                            <div class="form-row">
+                                <div class="form-group col-sm-12">
+                                    <input type="text" class="form-control bg-secondary border-0 py-4 px-3" required placeholder="이름"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="축하 메세지를 입력해주세요" required></textarea>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary font-weight-bold py-3 px-5">등록</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Comment End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white py-5" id="contact" style="margin-top: 90px;">
+        <div class="container text-center py-5">
+            <div class="section-title position-relative text-center">
+                <h1 class="font-secondary display-3 text-white">Thank You</h1>
+                <i class="far fa-heart text-white"></i>
+            </div>
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="d-flex justify-content-center py-2">
+                <p class="text-white" href="#">info@example.com</p>
+                <span class="px-3">|</span>
+                <p class="text-white" href="#">+012 345 6789</p>
+            </div>
+            <p class="m-0">&copy; <a class="text-primary" href="#">Domain Name</a>. Designed by <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a>
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    <script src="{% static 'lib/easing/easing.min.js'%}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js'%}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'lib/isotope/isotope.pkgd.min.js'%}"></script>
+    <script src="{% static 'lib/lightbox/js/lightbox.min.js'%}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js'%}"></script>
+</body>
+
+</html>
